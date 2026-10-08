@@ -138,7 +138,7 @@ export default function Hero() {
 
           <motion.a
             className="border-stroke text-label hover:border-label hover:bg-container-fill focus-visible:outline-accent mt-13 inline-flex min-h-12 items-center gap-[0.8rem] rounded-full border py-[0.55rem] pr-[1.15rem] pl-[1.35rem] text-sm font-medium no-underline transition-colors duration-[160ms] focus-visible:outline-2 focus-visible:outline-offset-4 motion-reduce:transition-none max-mobile:mt-8"
-            href="#projects"
+            href="#about"
             variants={shouldReduceMotion ? undefined : copyItem}
           >
             <span>Scroll to see more</span>
@@ -170,7 +170,7 @@ export default function Hero() {
                 transition={{
                   duration: 0.6,
                   ease: easeOut,
-                  delay: 0.18 + index * 0.1,
+                  delay: 0.28 + index * 0.1,
                 }}
                 onHoverStart={() => setLiftedCard(src)}
                 onHoverEnd={() =>

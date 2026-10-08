@@ -87,8 +87,8 @@ export const uiuxprojects: UiuxProject[] = [
         targetUserLabel: "The store managers that still manage their store manually.",
         targetUserDesc: "Every day i message my employee asking about the inventory status and sales before making the report manually myself.",
         myRole: "As the sole designer, i responsible to turning the solution found from the problem into a fully interactive prototype.",
-        figmaUrl: "",
-        prototypeUrl: ""
+        figmaUrl: "https://www.figma.com/design/aDrJjlrDtGygOGy02oe6hu/Erusea?node-id=0-1&m=dev&t=vAMivYBFXUe7cPCh-1",
+        prototypeUrl: "https://www.figma.com/proto/aDrJjlrDtGygOGy02oe6hu/Erusea?node-id=0-1&t=vAMivYBFXUe7cPCh-1"
     },
     {   
         image: chimatcha,
@@ -102,8 +102,8 @@ export const uiuxprojects: UiuxProject[] = [
         targetUserDesc1: "I drink it every morning instead of coffee, it keeps me focused all day.",
         targetUserDesc2: "Ugh, i want to have some matcha but buying it in this rush hour will make me stuck in line for minutes",
         myRole: "As one of the two designers in this project, i handled the layouting, wireframing, and building the High Fidelity Prototype.",
-        figmaUrl: "",
-        prototypeUrl: ""
+        figmaUrl: "https://www.figma.com/design/vf5OLLU5ecK8R3nAaiRSEP/Chi-Matcha?node-id=0-1&m=dev&t=59rQOCZd9tUKOZZk-1",
+        prototypeUrl: "https://www.figma.com/proto/vf5OLLU5ecK8R3nAaiRSEP/Chi-Matcha?node-id=0-1&t=59rQOCZd9tUKOZZk-1"
     },
     {
         image: guardify,
@@ -114,8 +114,8 @@ export const uiuxprojects: UiuxProject[] = [
         targetUserLabel: "People that spend most of their time with their phone or computer",
         targetUserDesc: "I loveeeee surfing on the internet...",
         myRole: "As one of the designer of this project, I handled the design of safe browsing pages and the security notification pages.",
-        figmaUrl: "",
-        prototypeUrl: ""
+        figmaUrl: "https://www.figma.com/design/yBErkf5rgKLymOpNlubOkc/Guardify---TECHFEST-2025?node-id=0-1&m=dev&t=iJFmbkWEZEiP8cjK-1",
+        prototypeUrl: "https://www.figma.com/proto/yBErkf5rgKLymOpNlubOkc/Guardify---TECHFEST-2025?node-id=0-1&t=iJFmbkWEZEiP8cjK-1"
     },
     {
         image: hero,
@@ -126,8 +126,8 @@ export const uiuxprojects: UiuxProject[] = [
         targetUserLabel: "New player that are interested to play HSR",
         targetUserDesc: "I intested to play this game, probably want to try visiting their official website to get more info, wait, why is their website so slow and had too many content being viewed at one time?",
         myRole: "As the sole participant of the competition, i was tasked to identify the problem with the official website and from the conclusions that i found, i then redesign the new website by focusing on fixing the weakness of the official website.",
-        figmaUrl: "",
-        prototypeUrl: ""
+        figmaUrl: "https://www.figma.com/design/H734Ir135Yy2OJ4wBw3gth/Game-Promotion-Web?node-id=0-1&m=dev&t=bxSuY3tkCSGkPTa4-1",
+        prototypeUrl: "https://www.figma.com/proto/H734Ir135Yy2OJ4wBw3gth/Game-Promotion-Web?node-id=0-1&t=bxSuY3tkCSGkPTa4-1"
     }
 ]
 
@@ -181,21 +181,9 @@ export const frontendprojects: CodeProject[] = [
         goal: "To redesign the official HSR website and improve overall User Experience.",
         role: "As the sole participant of the competition, i was tasked with both design and developing the website.",
         technologies: ["React", "Tailwind CSS", "GSAP"],
-        sourceUrl: "",
-        demoUrl: ""
+        sourceUrl: "https://github.com/TrollfaceGaming69/Fanmade-HSR-Promotion-Website",
+        demoUrl: "https://fanmade-hsr-promotion-website.vercel.app/"
     },
-    {
-        image: "",
-        name: "Raisanova Gallery: An UMKM Profile Website",
-        label: "A website created as my project in DIGITERA Binus University volunteering activities to help UMKM in Malang",
-        projectOverview: "",
-        problem: "An UMKM want more people to know about their business.",
-        goal: "Creating a website that can promote the UMKM to wider audience.",
-        role: "I was responsible with developing the website",
-        technologies: ["HTML", "CSS", "JavaScript"],
-        sourceUrl: "",
-        demoUrl: ""
-    }
 ]
 
 export const fullstackprojects: CodeProject[] = [
@@ -208,7 +196,7 @@ export const fullstackprojects: CodeProject[] = [
         goal: "To design and build a fullstack music streaming services that are interactive and easy to use.",
         role: "Being one of two developer of this project, i tasked with designing the overall structure of the website before my partner would finish with the details and components, i also tasked with developing the backend such as media fetch and authentication.",
         technologies: ["Vue", "Express", "MongoDB", "ImageKit"],
-        sourceUrl: "",
+        sourceUrl: "https://github.com/TrollfaceGaming69/SpoJeDy",
         demoUrl: ""
     },
    /* {

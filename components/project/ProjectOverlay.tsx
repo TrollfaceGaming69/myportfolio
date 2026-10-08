@@ -52,15 +52,21 @@ function BrandIcon({ name }: { name: keyof typeof brandIcons }) {
 /**
  * Footer pill. Renders as a link when the URL is filled in, and as a disabled
  * button while the project has no URL yet, so the layout stays intact.
+ *
+ * `cursorLabel` says where the link actually goes, which is more use under the
+ * pointer than the button's own wording. The disabled variant deliberately
+ * leaves it off: promising to open something that isn't there would mislead.
  */
 function ActionButton({
   href,
   label,
+  cursorLabel,
   icon,
   filled = false,
 }: {
   href?: string;
   label: string;
+  cursorLabel: string;
   icon: ReactNode;
   filled?: boolean;
 }) {
@@ -86,6 +92,8 @@ function ActionButton({
       href={href}
       target="_blank"
       rel="noreferrer noopener"
+      data-cursor="pill"
+      data-cursor-label={cursorLabel}
     >
       {label}
       {icon}
@@ -352,11 +360,13 @@ function OverlayPanel({
                 <ActionButton
                   href={project.figmaUrl}
                   label="Figma dev view"
+                  cursorLabel="Open Figma dev"
                   icon={<BrandIcon name="figma" />}
                 />
                 <ActionButton
                   href={project.prototypeUrl}
                   label="Prototype view"
+                  cursorLabel="Open Figma prototype"
                   icon={
                     <ArrowUpRight
                       aria-hidden="true"
@@ -372,11 +382,13 @@ function OverlayPanel({
                 <ActionButton
                   href={project.sourceUrl}
                   label="View source code"
+                  cursorLabel="Open GitHub repo"
                   icon={<BrandIcon name="github" />}
                 />
                 <ActionButton
                   href={project.demoUrl}
                   label="Live Demo"
+                  cursorLabel="Open live website"
                   icon={
                     <ArrowUpRight
                       aria-hidden="true"

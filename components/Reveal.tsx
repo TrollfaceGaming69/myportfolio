@@ -20,7 +20,7 @@ const solo: Variants = {
   visible: (delay: number = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, ease: easeOut, delay },
+    transition: { duration: 1.5, ease: easeOut, delay },
   }),
 };
 

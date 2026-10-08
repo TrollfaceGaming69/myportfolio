@@ -1,23 +1,14 @@
 import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
+import { socialProfiles } from "@/constant/personaldata";
 
+// White marks for the dark footer. URLs come from the shared list so the navbar
+// and the footer can never drift apart.
 const socialLinks = [
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/",
-    icon: "/linkedin.svg",
-  },
-  {
-    label: "GitHub",
-    href: "https://github.com/",
-    icon: "/github.svg",
-  },
-  {
-    label: "Dribbble",
-    href: "https://dribbble.com/",
-    icon: "/dribble.svg",
-  },
-];
+  { label: "LinkedIn", icon: "/linkedin.svg" },
+  { label: "GitHub", icon: "/github.svg" },
+  { label: "Dribbble", icon: "/dribble.svg" },
+] as const;
 
 export default function Footer() {
   return (
@@ -67,11 +58,11 @@ export default function Footer() {
           <Reveal className="min-w-40" delay={0.1}>
             <h3 className="text-xl leading-label font-bold">Get in touch</h3>
             <ul className="mt-3 flex items-center gap-3" aria-label="Social links">
-              {socialLinks.map(({ label, href, icon }) => (
+              {socialLinks.map(({ label, icon }) => (
                 <li key={label}>
                   <a
                     className="inline-flex rounded-sm focus-visible:outline-accent focus-visible:outline-2 focus-visible:outline-offset-4"
-                    href={href}
+                    href={socialProfiles[label]}
                     target="_blank"
                     rel="noreferrer"
                     aria-label={label}
@@ -89,9 +80,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <p className="text-stroke mt-2 text-xs leading-label font-normal">
-              LinkedIn · GitHub · Dribbble
-            </p>
+
           </Reveal>
         </div>
 
@@ -100,7 +89,7 @@ export default function Footer() {
             invisible forever. */}
         <div className="border-stroke/40 mt-10 border-t pt-5">
           <p className="text-stroke text-xs leading-label font-normal">
-            Alfatih Miftahul · Designer &amp; Developer
+            Alfatih Miftahul 
           </p>
         </div>
       </div>

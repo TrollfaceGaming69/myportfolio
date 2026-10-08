@@ -33,7 +33,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${monaSans.variable} ${hedvigLettersSerif.variable} ${geistMono.variable} no-scrollbar h-full antialiased`}
+      // motion-safe keeps the eased scroll off for anyone who asks for reduced
+      // motion, so in-page links jump instantly for them instead.
+      className={`${monaSans.variable} ${hedvigLettersSerif.variable} ${geistMono.variable} no-scrollbar h-full antialiased motion-safe:scroll-smooth`}
     >
       <body className="bg-background text-text font-sans flex min-h-full flex-col">
         {/* Both pin themselves to the top of the viewport, so they live in the

@@ -34,7 +34,7 @@ export const organizationalActivities = [
         picture: techno,
         name: "TECHNO 2025 - Event Staff",
         date: "August 2025",
-        desc: "I was tasked with finding and contacting the "
+        desc: "As a part of the event staff, i contributed by finding and contacting sources who were willing to be presenters for the event. "
     }
 ]
 
@@ -70,6 +70,19 @@ export const education = [
         school: "BINUS University",
         major: "Computer Science - Interactive Multimedia",
         year: "2024 - 2028",
-        desc: "Learned the core principles of programming starting from the basics using C, fundamentals like Data Structures and Algorithms, until real life implementation like Web Development and Multimedia Programming"
+        desc: "Learned the core principles of programming starting from the basics of programming using C, fundamentals like Data Structures and Algorithms, until real life implementation like Web Development and Multimedia Programming."
     }
 ]
+
+/**
+ * Shared by the navbar and the footer. Only the URLs live here: each component
+ * pairs them with its own icon asset, because the navbar needs the black marks
+ * and the footer the white ones, and the two show them in a different order.
+ */
+export const socialProfiles = {
+    GitHub: "https://github.com/TrollfaceGaming69",
+    LinkedIn: "https://www.linkedin.com/in/al-fatih-miftahul-bilad-895323326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    Dribbble: "https://dribbble.com/TrollfaceGaming"
+} as const
+
+export type SocialLabel = keyof typeof socialProfiles
