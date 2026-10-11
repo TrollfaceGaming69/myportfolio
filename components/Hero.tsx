@@ -95,7 +95,7 @@ export default function Hero() {
         aria-labelledby="hero-title"
       >
         <motion.div
-          className="relative z-1 max-tablet:max-w-[38rem]"
+          className="relative z-1 max-tablet:max-w-152"
           variants={shouldReduceMotion ? undefined : copyGroup}
           initial={shouldReduceMotion ? false : "hidden"}
           animate="visible"
@@ -127,7 +127,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
-            className="mt-5 max-w-[31rem] text-base leading-copy font-medium"
+            className="mt-5 max-w-124 text-base leading-copy font-medium"
             variants={shouldReduceMotion ? undefined : copyItem}
           >
             I design and build user-centered experiences across web, mobile, and

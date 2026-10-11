@@ -30,7 +30,13 @@ const solo: Variants = {
  */
 const grouped: Variants = {
   hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: easeOut } },
+  visible: (
+    { delay = 0, duration = 0.55 }: { delay?: number; duration?: number } = {},
+  ) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration, ease: easeOut, delay },
+  }),
 };
 
 const group: Variants = {
@@ -111,13 +117,20 @@ export function RevealGroup({
 export function RevealItem({
   as = "div",
   className,
+  delay = 0,
+  duration = 0.55,
   children,
   ...rest
-}: CommonProps & Record<string, unknown>) {
+}: CommonProps & { delay?: number; duration?: number } & Record<string, unknown>) {
   const Tag = tags[as];
 
   return (
-    <Tag className={className} variants={grouped} {...rest}>
+    <Tag
+      className={className}
+      variants={grouped}
+      custom={{ delay, duration }}
+      {...rest}
+    >
       {children}
     </Tag>
   );

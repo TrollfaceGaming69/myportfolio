@@ -224,7 +224,7 @@ function OverlayPanel({
         transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
       >
         <button
-          className="border-stroke/60 text-label bg-background/85 hover:bg-container-fill focus-visible:outline-accent absolute top-5 right-5 z-10 grid size-9 cursor-pointer place-items-center rounded-full border backdrop-blur-sm transition-colors duration-[160ms] focus-visible:outline-2 focus-visible:outline-offset-2 motion-reduce:transition-none"
+          className="border-stroke/60 text-label bg-background/85 hover:bg-container-fill focus-visible:outline-accent absolute top-5 right-5 z-10 grid size-9 cursor-pointer place-items-center rounded-full border backdrop-blur-sm transition-colors duration-160 focus-visible:outline-2 focus-visible:outline-offset-2 motion-reduce:transition-none"
           ref={closeRef}
           type="button"
           onClick={onClose}
@@ -295,7 +295,7 @@ function OverlayPanel({
                             <p className="text-label text-[14px] leading-label font-bold tracking-body">
                               {label}
                             </p>
-                            <p className="text-text mt-1 text-[13px] leading-[1.5] font-medium tracking-body">
+                            <p className="text-text mt-1 text-[13px] leading-normal font-medium tracking-body">
                               &ldquo;{quote}&rdquo;
                             </p>
                           </div>
@@ -342,7 +342,7 @@ function OverlayPanel({
               <ul className="mt-3 flex flex-wrap gap-2">
                 {project.technologies.map((technology) => (
                   <li
-                    className="bg-accent flex min-w-[7rem] items-center justify-center rounded-full px-5 py-2.5 text-[14px] leading-[1.1] font-semibold whitespace-nowrap text-white"
+                    className="bg-accent flex min-w-28 items-center justify-center rounded-full px-5 py-2.5 text-[14px] leading-[1.1] font-semibold whitespace-nowrap text-white"
                     key={technology}
                   >
                     {technology}

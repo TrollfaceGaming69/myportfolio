@@ -4,6 +4,7 @@ import pfp from "@/public/pfp.jpeg";
 import { Reveal } from "@/components/Reveal";
 import ActivityList from "@/components/about/ActivityList";
 import ExpandableItem from "@/components/about/ExpandableItem";
+import RoleCycle from "@/components/about/RoleCycle";
 import {
   education,
   organizationalActivities,
@@ -35,7 +36,7 @@ export default function About() {
       <div className="mx-auto w-[min(100%,67rem)]">
         <Reveal>
           <h2
-            className="text-label mb-[1.125rem] text-[32px] leading-[1.2] font-bold tracking-body"
+            className="text-label mb-4.5 text-[32px] leading-[1.2] font-bold tracking-body"
             id="about-title"
           >
             Get to know me
@@ -70,12 +71,12 @@ export default function About() {
               <p className="text-label col-span-2 row-start-2 mt-3.5 text-xl leading-label font-bold tracking-body max-mobile:col-span-1 max-mobile:col-start-2 max-mobile:row-start-1 max-mobile:mt-0 max-mobile:self-end">
                 Al Fatih Miftahul Bilad
               </p>
-              <p className="col-span-2 row-start-3 mt-1.5 text-xs leading-label font-semibold tracking-body max-mobile:col-span-1 max-mobile:col-start-2 max-mobile:row-start-2 max-mobile:mt-1 max-mobile:self-start">
-                UI/UX Design
+              <p className="col-span-2 row-start-3 mt-1.5 text-lg leading-label font-semibold tracking-body max-mobile:col-span-1 max-mobile:col-start-2 max-mobile:row-start-2 max-mobile:mt-1 max-mobile:self-start">
+                <RoleCycle />
               </p>
               <p className="text-text col-start-2 row-start-1 text-base leading-copy font-medium tracking-body max-mobile:col-span-2 max-mobile:col-start-1 max-mobile:row-start-3 max-mobile:mt-4">
-                A Computer Science student with a strong passion for UI/UX, web
-                development and software engineering. From designing interfaces
+                A Computer Science student with a strong passion for UI/UX, Web
+                Development and Software Engineering. From designing interfaces
                 to building behind-the-scenes systems, I combine design
                 creativity with programming logic to build responsive,
                 intuitive, and efficient web applications. Throughout the

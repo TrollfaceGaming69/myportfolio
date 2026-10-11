@@ -33,12 +33,12 @@ const collapse = {
 /** The visible part of a row. Split out so both the static and animated rows share it. */
 function ActivityRow({ activity }: { activity: Activity }) {
   return (
-    <div className="border-stroke flex items-center gap-6 border-b py-[0.8125rem] max-mobile:gap-4">
+    <div className="border-stroke flex items-center gap-6 border-b py-3.25 max-mobile:gap-4">
       <div className="min-w-0 flex-1">
         <h4 className="text-label text-sm leading-label font-semibold tracking-body">
           {activity.name}
         </h4>
-        <p className="text-label mt-[0.1875rem] text-sm leading-label font-normal tracking-body">
+        <p className="text-label mt-0.75 text-sm leading-label font-normal tracking-body">
           {activity.date}
         </p>
         <p className="text-smalldesc mt-1 text-sm leading-[1.4] font-normal tracking-body">
@@ -46,7 +46,7 @@ function ActivityRow({ activity }: { activity: Activity }) {
         </p>
       </div>
       <Image
-        className="aspect-[14/9] h-auto w-42 flex-none rounded-lg object-cover max-mobile:w-28"
+        className="aspect-14/9 h-auto w-42 flex-none rounded-lg object-cover max-mobile:w-28"
         src={activity.picture}
         alt={`${activity.name} documentation`}
         sizes="(max-width: 560px) 112px, 168px"
@@ -71,7 +71,7 @@ export default function ActivityList({
 
   return (
     // Padding instead of margin so it doesn't collapse into the heading's.
-    <div className="max-w-[33rem] pt-1.5 max-tablet:max-w-none">
+    <div className="max-w-132 pt-1.5 max-tablet:max-w-none">
       <ul className="border-stroke border-t" id={listId}>
         {alwaysOn.map((activity) => (
           <li key={activity.name}>

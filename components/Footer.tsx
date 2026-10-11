@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Reveal } from "@/components/Reveal";
+import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import { socialProfiles } from "@/constant/personaldata";
 
 // White marks for the dark footer. URLs come from the shared list so the navbar
@@ -29,8 +29,8 @@ export default function Footer() {
           </h2>
         </Reveal>
 
-        <div className="mt-28 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-12 max-tablet:mt-20 max-tablet:grid-cols-1 max-tablet:items-start max-tablet:gap-10 max-mobile:mt-14 max-mobile:gap-9">
-          <Reveal>
+        <RevealGroup className="mt-28 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-12 max-tablet:mt-20 max-tablet:grid-cols-1 max-tablet:items-start max-tablet:gap-10 max-mobile:mt-14 max-mobile:gap-9">
+          <RevealItem duration={1.5}>
             <h3 className="max-w-xl text-[40px] leading-[1.02] font-bold tracking-[-0.04em] max-mobile:text-[clamp(1.75rem,7vw,2.5rem)]">
               Let&apos;s <span className="text-accent">create</span> incredible
               work <span className="text-accent">together</span>
@@ -53,9 +53,9 @@ export default function Footer() {
                 Alfatihmiftahul.mz@gmail.com
               </a>
             </div>
-          </Reveal>
+          </RevealItem>
 
-          <Reveal className="min-w-40" delay={0.1}>
+          <RevealItem className="min-w-40" delay={0.5} duration={0.55}>
             <h3 className="text-xl leading-label font-bold">Get in touch</h3>
             <ul className="mt-3 flex items-center gap-3" aria-label="Social links">
               {socialLinks.map(({ label, icon }) => (
@@ -80,9 +80,8 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-
-          </Reveal>
-        </div>
+          </RevealItem>
+        </RevealGroup>
 
         {/* Deliberately not revealed: it sits in the last 20% of the page, which
             is below the trigger line even at maximum scroll, so it would stay

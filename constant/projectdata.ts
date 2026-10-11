@@ -197,7 +197,7 @@ export const fullstackprojects: CodeProject[] = [
         role: "Being one of two developer of this project, i tasked with designing the overall structure of the website before my partner would finish with the details and components, i also tasked with developing the backend such as media fetch and authentication.",
         technologies: ["Vue", "Express", "MongoDB", "ImageKit"],
         sourceUrl: "https://github.com/TrollfaceGaming69/SpoJeDy",
-        demoUrl: ""
+        demoUrl: "https://spojedy-frontend.onrender.com/"
     },
    /* {
         image: "",
