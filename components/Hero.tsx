@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, FileText } from "lucide-react";
 import { motion, useReducedMotion, type Variants } from "motion/react";
 
 const skills = [
@@ -136,14 +136,27 @@ export default function Hero() {
             better.
           </motion.p>
 
-          <motion.a
-            className="border-stroke text-label hover:border-label hover:bg-container-fill focus-visible:outline-accent mt-13 inline-flex min-h-12 items-center gap-[0.8rem] rounded-full border py-[0.55rem] pr-[1.15rem] pl-[1.35rem] text-sm font-medium no-underline transition-colors duration-[160ms] focus-visible:outline-2 focus-visible:outline-offset-4 motion-reduce:transition-none max-mobile:mt-8"
-            href="#about"
+          <motion.div
+            className="mt-13 flex flex-wrap items-center gap-3 max-mobile:mt-8"
             variants={shouldReduceMotion ? undefined : copyItem}
           >
-            <span>Scroll to see more</span>
-            <ArrowDown aria-hidden="true" size={19} strokeWidth={2} />
-          </motion.a>
+            <a
+              className="border-stroke text-label hover:border-label hover:bg-container-fill focus-visible:outline-accent inline-flex min-h-12 items-center gap-[0.8rem] rounded-full border py-[0.55rem] pr-[1.15rem] pl-[1.35rem] text-sm font-medium no-underline transition-colors duration-[160ms] focus-visible:outline-2 focus-visible:outline-offset-4 motion-reduce:transition-none"
+              href="#about"
+            >
+              <span>Scroll to see more</span>
+              <ArrowDown aria-hidden="true" size={19} strokeWidth={2} />
+            </a>
+            <a
+              className="bg-accent hover:bg-accent/85 focus-visible:outline-accent inline-flex min-h-12 items-center gap-[0.8rem] rounded-full border border-transparent py-[0.55rem] pr-[1.15rem] pl-[1.35rem] text-sm font-medium text-white no-underline transition-colors duration-[160ms] focus-visible:outline-2 focus-visible:outline-offset-4 motion-reduce:transition-none"
+              href="/CV Al Fatih Miftahul Bilad.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Download CV</span>
+              <FileText aria-hidden="true" size={19} strokeWidth={2} />
+            </a>
+          </motion.div>
         </motion.div>
 
         <div
